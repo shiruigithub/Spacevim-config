@@ -1,0 +1,113 @@
+#=============================================================================
+# basic.toml --- basic configuration example for SpaceVim
+# Copyright (c) 2016-2017 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    colorscheme = "material"
+    colorscheme_bg = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "cli"
+    statusline_inactive_separator = "cli"
+    buffer_index_type = 4
+    windows_index_type = 3
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = true
+    statusline_unicode_symbols = true
+    # Enable vim compatible mode, avoid changing origin vim key bindings
+    vimcompatible = true
+    # enable_ycm = true
+    bootstrap_after="config#after"
+    filemanager = "nerdtree"
+
+
+
+
+[[layers]]
+name = 'autocomplete'
+auto-completion-return-key-behavior = "complete"
+auto-completion-tab-key-behavior = "smart"
+
+[[custom_plugins]]
+  name = "mhartington/oceanic-next"
+  merged = 0
+
+[[layers]]
+name = 'shell'
+default_position = 'bottom'
+default_height = 30
+
+[[layers]]
+name = 'colorscheme'
+
+
+[[layers]]
+name = 'lang#latex'
+
+[[layers]]
+name = 'lang#markdown'
+
+[[layers]]
+  name = "fzf"
+[[layers]]
+  name = "git"
+[[layers]]
+  name = "sudo"
+[[layers]]
+name = 'lang#python'
+format_on_save = 1
+enable_typeinfo = true 
+python_file_head = [
+    '#!/usr/bin/env python',
+    '# -*- coding: utf-8 -*-',
+    '',
+    ''
+]
+
+
+[[layers]]
+name = 'lang#sh'
+
+[[layers]]
+name = 'ui'
+
+[[layers]]
+name = "lang#extra"
+
+
+[[layers]]
+name = "checkers"
+
+# [[layers]]
+  # name = "chat"
+
+[[layers]]
+name = "format"
+
+
+[[layers]]
+name = "debug"
+
+
+[[custom_plugins]]
+name = 'cp2k/vim-cp2k'
+
+
+[[custom_plugins]]
+name = 'ryanoasis/vim-devicons'
+
+
+[[custom_plugins]]
+name = 'xuhdev/vim-latex-live-preview'
+
